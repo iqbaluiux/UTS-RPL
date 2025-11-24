@@ -291,9 +291,7 @@ WaliMurid --> (Terima Notifikasi)
 ---
 
 # 📌 2. Class Diagram
-![Class Diagram](diagrams/class.png)
-
-Diagram berikut adalah class diagram final (versi lengkap):
+![Class Diagram](diagrams/class diagram.png)
 
 ```plantuml
 @startuml
