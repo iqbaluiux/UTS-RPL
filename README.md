@@ -262,7 +262,7 @@ Implementasi Mobile App (Flutter) untuk akses cepat wali murid.
 Dashboard analitik perilaku & performa akademik siswa.
 
 Lampiran
-# 📌 1. Use Case Diagram
+# 1. Use Case Diagram
 ![Use Case Diagram](diagrams/usecase.png)
 
 ```plantuml
@@ -290,7 +290,7 @@ WaliMurid --> (Terima Notifikasi)
 
 ---
 
-# 📌 2. Class Diagram
+# 2. Class Diagram
 ![Class Diagram](diagrams/class diagram.png)
 
 ```plantuml
@@ -449,7 +449,7 @@ ReportService --> AuditService
 
 ---
 
-# 📌 3. Sequence Diagram – Proses Input Absensi
+# 3. Sequence Diagram – Proses Input Absensi
 ![Sequence Diagram](diagrams/sequence.png)
 
 ```plantuml
@@ -472,7 +472,7 @@ Guru <-- AttendanceController: Absensi Tersimpan
 
 ---
 
-# 📌 4. Activity Diagram – Input Nilai
+# 4. Activity Diagram – Input Nilai
 ![Activity Diagram](diagrams/activity.png)
 
 ```plantuml
@@ -495,7 +495,7 @@ stop
 
 ---
 
-# 📌 5. State Machine Diagram – Status Insiden
+# 5. State Machine Diagram – Status Insiden
 ![State Diagram](diagrams/state.png)
 
 ```plantuml
@@ -510,7 +510,7 @@ Resolved --> [*]
 
 ---
 
-# 📌 6. Penerapan SOLID
+# 6. Penerapan SOLID
 
 **Prinsip dipilih: Single Responsibility Principle (SRP)**  
 Setiap service hanya menangani satu jenis proses.  
@@ -522,7 +522,7 @@ Contoh:
 
 ---
 
-# 📌 7. Creational Design Patterns
+# 7. Creational Design Patterns
 
 ✔ **Factory Method** – untuk menciptakan BehaviorNote  
 ✔ **Builder Pattern** – untuk membuat laporan rapor  
@@ -530,7 +530,7 @@ Contoh:
 
 ---
 
-# 📌 8. Dependency Injection
+# 8. Dependency Injection
 
 Controller menerima service melalui constructor:
 
@@ -629,7 +629,7 @@ State Machine ini menggambarkan lifecycle penanganan insiden dari awal sampai se
 Alur ini bersifat linear dan satu arah, untuk menjaga integritas data dan memastikan setiap insiden ditangani sesuai prosedur sekolah.
 ---
 
-# 📌 11. Evaluasi Maintainability, Reusability, Extensibility
+# 11. Evaluasi Maintainability, Reusability, Extensibility
 
 - **Maintainable** karena controller kecil, service terpisah
 - **Reusable** karena method service dapat dipanggil dari modul lain
@@ -637,7 +637,7 @@ Alur ini bersifat linear dan satu arah, untuk menjaga integritas data dan memast
 
 ---
 
-# 📌 12. Usulan Pengembangan
+# 12. Usulan Pengembangan
 
 - **Sistem Rekomendasi Pembinaan Siswa**  
 Menggunakan data perilaku + absensi + insiden untuk menentukan rekomendasi otomatis kepada wali murid.
