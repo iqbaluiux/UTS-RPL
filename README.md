@@ -557,7 +557,9 @@ Contoh:
 # 7. Creational Design Patterns
 
 **Factory Method** – Membuat objek CatatanPerilaku sesuai kategori (positif/negatif/pembinaan).
-**Builder Pattern** – Menggabungkan data absensi, nilai, dan perilaku menjadi satu laporan siswa. 
+
+**Builder Pattern** – Menggabungkan data absensi, nilai, dan perilaku menjadi satu laporan siswa.
+
 **Singleton Pattern** – NotificationService untuk mengelola pengiriman notifikasi ke wali murid.
 
 ---
