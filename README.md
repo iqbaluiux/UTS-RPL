@@ -291,7 +291,35 @@ WaliMurid --> (Terima Notifikasi)
 ---
 
 # 2. Class Diagram
-![Class Diagram](diagrams/class diagram.png)
+![Class Diagram](diagrams/classdiagram.png)
+
+## Penjelasan Relasi Class Diagram
+
+Berikut penjelasan lengkap hubungan antar kelas dalam SISPeka:
+
+### 1. **User → Guru / Wali Murid (One-to-One Optional)**
+- Setiap *User* bisa menjadi *Guru* atau *Wali Murid*, tetapi tidak wajib.
+- Ini memberikan fleksibilitas karena satu User hanya bisa memiliki satu role.
+
+### 2. **Kelas → Siswa (One-to-Many)**
+- Satu kelas berisi banyak siswa.
+- Setiap siswa hanya memiliki satu kelas.
+
+### 3. **Guru → TeachingAssignment (One-to-Many)**
+- Guru dapat mengajar banyak kelas.
+- Setiap teaching assignment terkait satu guru.
+
+### 4. **Subject → TeachingAssignment (One-to-Many)**
+- Satu mata pelajaran bisa diajarkan di berbagai kelas oleh berbagai guru.
+
+### 5. **Siswa → Attendance / Grade / Behavior / Incident (One-to-Many)**
+- Satu siswa memiliki banyak catatan nilai, absensi, perilaku, dan insiden.
+
+### 6. **User → Notification (One-to-Many)**
+- User bisa menerima banyak notifikasi.
+
+### 7. **Service Layer → Entity Layer (Dependency)**
+- Semua service berinteraksi dengan entitas melalui Repository.
 
 ```plantuml
 @startuml
@@ -659,31 +687,3 @@ A Systematic Review on How Parental Involvement in ICT Enhances Digital Literacy
 The Role of Digital Communication Between Parents and Schools in Improving Attendance Effectiveness — jurnal Indonesia 2025, fokus komunikasi digital sekolah-orang tua dalam efektivitas kehadiran siswa. 
 ParentTeacher Digital Communication Among Early Childhood Education — meski edukasi anak usia dini, tetap relevan karena komunikasi digital sekolah-orang tua. 
 
-
-## Penjelasan Relasi Class Diagram
-
-Berikut penjelasan lengkap hubungan antar kelas dalam SISPeka:
-
-### 1. **User → Guru / Wali Murid (One-to-One Optional)**
-- Setiap *User* bisa menjadi *Guru* atau *Wali Murid*, tetapi tidak wajib.
-- Ini memberikan fleksibilitas karena satu User hanya bisa memiliki satu role.
-
-### 2. **Kelas → Siswa (One-to-Many)**
-- Satu kelas berisi banyak siswa.
-- Setiap siswa hanya memiliki satu kelas.
-
-### 3. **Guru → TeachingAssignment (One-to-Many)**
-- Guru dapat mengajar banyak kelas.
-- Setiap teaching assignment terkait satu guru.
-
-### 4. **Subject → TeachingAssignment (One-to-Many)**
-- Satu mata pelajaran bisa diajarkan di berbagai kelas oleh berbagai guru.
-
-### 5. **Siswa → Attendance / Grade / Behavior / Incident (One-to-Many)**
-- Satu siswa memiliki banyak catatan nilai, absensi, perilaku, dan insiden.
-
-### 6. **User → Notification (One-to-Many)**
-- User bisa menerima banyak notifikasi.
-
-### 7. **Service Layer → Entity Layer (Dependency)**
-- Semua service berinteraksi dengan entitas melalui Repository.
