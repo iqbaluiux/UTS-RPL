@@ -6,7 +6,7 @@
 SISPEKA+ (Sistem Informasi Pengawasan & Evaluasi Karakter dan Akademik Siswa SMA)
 *Disusun Oleh:*
 Muhamad Ikbal Nurpadila (23010220007)
-Naila Sapitri ( )
+
 
 **Abstrak:**
 SISPEKA+ merupakan sistem informasi berbasis web yang dirancang untuk meningkatkan transparansi dan kolaborasi antara guru, wali murid, serta pihak sekolah dalam pemantauan akademik dan perilaku siswa. Sistem ini berfungsi sebagai media pencatatan absensi, nilai, dan catatan karakter siswa yang dapat diakses secara real-time oleh wali murid. Melalui pendekatan Object-Oriented Design (OOD), sistem ini dibangun dengan struktur modular yang mendukung maintainability, scalability, dan reusability. Dengan implementasi pola desain seperti Factory Method, Builder, dan Singleton, sistem ini dapat dikembangkan lebih lanjut untuk mendukung analisis perilaku siswa dan sistem rekomendasi pembinaan.
@@ -670,25 +670,25 @@ Alur ini bersifat linear dan satu arah, untuk menjaga integritas data dan memast
 Desain sistem SISPeka bersifat modular dan memisahkan tanggung jawab menggunakan prinsip Single Responsibility Principle (SRP).
 Faktor yang membuat sistem mudah dirawat:
 
-*Pemisahan Lapisan (Layered Architecture)*
+**Pemisahan Lapisan (Layered Architecture)**
 
-Controller hanya menangani request/response.
+- Controller hanya menangani request/response.
 
-Service menangani logika bisnis.
+- Service menangani logika bisnis.
 
-Repository/Model menangani interaksi database.
+- Repository/Model menangani interaksi database.
 
 Dengan pemisahan ini, perubahan pada satu bagian tidak merusak bagian lainnya.
 
-*Dependency Injection*
+**Dependency Injection**
 
 Semua service yang dibutuhkan controller di‐inject melalui constructor, sehingga:
 
-Mudah dites (unit testing)
+- Mudah dites (unit testing)
 
-Mudah diganti implementasinya
+- Mudah diganti implementasinya
 
-Tidak perlu membuat instance manual
+- Tidak perlu membuat instance manual
 
 *Diagram UML yang jelas*
 
@@ -702,21 +702,21 @@ Banyak komponen sistem dapat dipakai ulang untuk fitur lain.
 
 Contoh:
 
-*Entity seperti Siswa, Guru, Kelas, Subject*
+**Entity seperti Siswa, Guru, Kelas, Subject**
 
 Dapat digunakan ulang untuk fitur tambahan seperti:
 
-Jadwal pelajaran
+- Jadwal pelajaran
 
-Ujian
+- Ujian
 
-Surat peringatan
+- Surat peringatan
 
-*Service seperti NotificationService, AuditService*
+**Service seperti NotificationService, AuditService**
 
 Sudah bersifat general, sehingga bisa dipakai di banyak modul tanpa diubah.
 
-*Pola desain Factory dan Builder*
+**Pola desain Factory dan Builder**
 
 Memungkinkan pembuatan objek yang fleksibel dan mudah digunakan ulang.
 
@@ -726,28 +726,28 @@ Kesimpulan: Sistem memiliki tingkat reusability tinggi.
 
 Sistem mudah diperluas karena:
 
-*Setiap modul berdiri sendiri*
+**Setiap modul berdiri sendiri**
 
 Contoh:
 Menambah fitur “Catatan Konseling” tidak akan mengganggu modul Absensi atau Nilai.
 
-*Ada State Machine yang rapi*
+**Ada State Machine yang rapi**
 
 Flow insiden dapat dengan mudah ditambah state baru seperti:
 
-“Follow-up Required”
+- Follow-up Required
 
-“Parent Meeting Scheduled”
+- Parent Meeting Scheduled
 
-*Penambahan fitur masa depan*
+**Penambahan fitur masa depan**
 
 Seperti:
 
-Notifikasi otomatis WA/Email
+- Notifikasi otomatis WA/Email
 
-Machine Learning (deteksi pola perilaku)
+- Machine Learning (deteksi pola perilaku)
 
-Dashboard analitik
+- Dashboard analitik
 
 Semua dapat ditambahkan tanpa memodifikasi struktur inti sistem.
 
