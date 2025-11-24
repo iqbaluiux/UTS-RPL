@@ -665,9 +665,93 @@ Alur ini bersifat linear dan satu arah, untuk menjaga integritas data dan memast
 
 # 11. Evaluasi Maintainability, Reusability, Extensibility
 
-- **Maintainable** karena controller kecil, service terpisah
-- **Reusable** karena method service dapat dipanggil dari modul lain
-- **Extendable** karena diagram mendukung penambahan fitur baru
+- **1. Maintainable** (Mudah Dirawat)
+
+Desain sistem SISPeka bersifat modular dan memisahkan tanggung jawab menggunakan prinsip Single Responsibility Principle (SRP).
+Faktor yang membuat sistem mudah dirawat:
+
+*Pemisahan Lapisan (Layered Architecture)*
+
+Controller hanya menangani request/response.
+
+Service menangani logika bisnis.
+
+Repository/Model menangani interaksi database.
+
+Dengan pemisahan ini, perubahan pada satu bagian tidak merusak bagian lainnya.
+
+*Dependency Injection*
+
+Semua service yang dibutuhkan controller di‐inject melalui constructor, sehingga:
+
+Mudah dites (unit testing)
+
+Mudah diganti implementasinya
+
+Tidak perlu membuat instance manual
+
+*Diagram UML yang jelas*
+
+Use Case, Class, Sequence, State Machine memudahkan pengembang baru memahami alur sistem.
+
+Kesimpulan: Desain sangat maintainable.
+
+- **2. Reusable** (Dapat Digunakan Ulang)
+
+Banyak komponen sistem dapat dipakai ulang untuk fitur lain.
+
+Contoh:
+
+*Entity seperti Siswa, Guru, Kelas, Subject*
+
+Dapat digunakan ulang untuk fitur tambahan seperti:
+
+Jadwal pelajaran
+
+Ujian
+
+Surat peringatan
+
+*Service seperti NotificationService, AuditService*
+
+Sudah bersifat general, sehingga bisa dipakai di banyak modul tanpa diubah.
+
+*Pola desain Factory dan Builder*
+
+Memungkinkan pembuatan objek yang fleksibel dan mudah digunakan ulang.
+
+Kesimpulan: Sistem memiliki tingkat reusability tinggi.
+  
+- **3. Extendable** (Mudah Dikembangkan)
+
+Sistem mudah diperluas karena:
+
+*Setiap modul berdiri sendiri*
+
+Contoh:
+Menambah fitur “Catatan Konseling” tidak akan mengganggu modul Absensi atau Nilai.
+
+*Ada State Machine yang rapi*
+
+Flow insiden dapat dengan mudah ditambah state baru seperti:
+
+“Follow-up Required”
+
+“Parent Meeting Scheduled”
+
+*Penambahan fitur masa depan*
+
+Seperti:
+
+Notifikasi otomatis WA/Email
+
+Machine Learning (deteksi pola perilaku)
+
+Dashboard analitik
+
+Semua dapat ditambahkan tanpa memodifikasi struktur inti sistem.
+
+Kesimpulan: Sistem sangat extendable.
 
 ---
 
