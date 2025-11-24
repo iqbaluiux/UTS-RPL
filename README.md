@@ -552,9 +552,9 @@ Contoh:
 
 # 7. Creational Design Patterns
 
-✔ **Factory Method** – untuk menciptakan BehaviorNote  
-✔ **Builder Pattern** – untuk membuat laporan rapor  
-✔ **Singleton Pattern** – untuk NotificationService
+**Factory Method** – untuk menciptakan BehaviorNote  
+**Builder Pattern** – untuk membuat laporan rapor  
+**Singleton Pattern** – untuk NotificationService
 
 ---
 
