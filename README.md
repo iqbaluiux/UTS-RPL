@@ -540,7 +540,11 @@ Resolved --> [*]
 
 # 6. Penerapan SOLID
 
-**Prinsip dipilih: Single Responsibility Principle (SRP)**  
+**Prinsip dipilih: Single Responsibility Principle (SRP)** 
+SISPeka menerapkan SOLID terutama melalui SRP, di mana setiap service memiliki satu tanggung jawab (absensi, nilai, perilaku, insiden).
+Sistem juga expandable berkat OCP, aman berkat LSP, modular berkat ISP, dan fleksibel melalui Dependency Injection (DIP).
+Ini membuat sistem mudah dirawat, bisa digunakan ulang, dan mudah dikembangkan.
+
 Setiap service hanya menangani satu jenis proses.  
 Contoh:
 
